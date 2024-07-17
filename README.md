@@ -26,6 +26,7 @@ When users update your app, they get new features, better performance, and bug f
         // after onCreate closing bracket }
 
          // ============== update =================
+         
     private void startUpdateFlow(AppUpdateInfo appUpdateInfo) {
         try {
             appUpdateManager.startUpdateFlowForResult(
@@ -41,7 +42,7 @@ When users update your app, they get new features, better performance, and bug f
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == MY_REQUEST_CODE) {
             if (resultCode != RESULT_OK) {
-// Handle update failure
+
                 Log.e("MainActivity", "Update flow failed! Result code: " + resultCode);
             }
         }
