@@ -13,12 +13,10 @@ When users update your app, they get new features, better performance, and bug f
         // ============== update =================
         // Initialize the AppUpdateManager
         appUpdateManager = AppUpdateManagerFactory.create(this);
-// Check for updates
         Task<AppUpdateInfo> appUpdateInfoTask = appUpdateManager.getAppUpdateInfo();
         appUpdateInfoTask.addOnSuccessListener(appUpdateInfo -> {
             if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE
                     && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.IMMEDIATE)) {
-// Request the update
                 startUpdateFlow(appUpdateInfo);
             }
         });
