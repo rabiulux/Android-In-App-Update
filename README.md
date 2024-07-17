@@ -4,6 +4,7 @@ When users update your app, they get new features, better performance, and bug f
 // in MainActivity
 
    //============== update =================
+   
     private static final int MY_REQUEST_CODE = 1001;
     private AppUpdateManager appUpdateManager;
 
